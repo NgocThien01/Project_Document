@@ -1,0 +1,3860 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="SQL*Plus 10.1.0">
+  <style type='text/css'>    body {font:10pt Arial,Helvetica,sans-serif; color:black; background:White;}    p {   font:10pt Arial,Helvetica,sans-serif; color:black; background:White;}          table,tr,td {font:8pt Arial,Helvetica,sans-serif; color:Black; background:#f7f7e7;          padding:0px 0px 0px 0px; margin:0px 0px 0px 0px; white-space:nowrap;}    th {  font:bold 10pt Arial,Helvetica,sans-serif; color:#336699; background:#cccc99;          padding:0px 0px 0px 0px;}    h1 {  font:10pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White;          border-bottom:1px solid #cccc99; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}    h2 {  font:bold 10pt Arial,Helvetica,Geneva,sans-serif; color:#336699; background-color:White;          margin-top:4pt; margin-bottom:0pt;} a {font:10pt Arial,Helvetica,sans-serif; color:#663300;          background:#ffffff; margin-top:0pt; margin-bottom:0pt; vertical-align:top;}    .notemsgsml { background-color: #FEFCEE; border: 2px solid #c1a90d; padding: 10px; border: 0px; border: 1px solid #c1a90d;             font:8pt Arial,Helvetica,sans-serif; line-height:70%;}    .notemsg { background-color: #FEFCEE; border: 2px solid #c1a90d; padding: 10px; border: 0px; border: 1px solid #c1a90d; }    .warningmsg { background-color: #FFFF4D; border: 2px solid #c1a90d; padding: 10px; border: 0px; border: 1px solid #c1a90d;     }    .errormsg { background-color: #FF3333; border: 2px solid #c1a90d; padding: 10px; border: 0px; border: 1px solid #c1a90d;      }  </style>  <title>POCREATEPO Diagnostic Output</title>
+</head>
+<body>
+<div class="notemsg">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+<br>
+This diagnostic's output is best viewed using Google Chrome or Firefox                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<br>
+It has some data validation to help you troubleshoot common issues with the createpo, create releases and sourcing data                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<br>
+<a href="#validations">Click on this link to jump to the data validation section</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+<br>
+</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+<br>
+
+<br>
+==========================
+<br>
+SYSTEM INFO
+<br>
+==========================
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+EXECUTION_DATE
+</th>
+<th scope="col">
+DB_NAME
+</th>
+<th scope="col">
+DB_VERSION
+</th>
+<th scope="col">
+SCRIPT_VERSION
+</th>
+</tr>
+<tr>
+<td>
+2025/05/06 14:29:59
+</td>
+<td>
+CDBSTB
+</td>
+<td>
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+</td>
+<td>
+120.03
+</td>
+</tr>
+</table>
+<p>
+==========================
+<br>
+INPUT PARAMETERS
+<br>
+==========================
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+DOCUMENT_NUMB
+</th>
+<th scope="col">
+HEADER_ID
+</th>
+<th scope="col">
+REQ_LINE_NUMBER
+</th>
+<th scope="col">
+REQ_LINE_ID
+</th>
+<th scope="col">
+USERNAME
+</th>
+<th scope="col">
+USERID
+</th>
+<th scope="col">
+RESPONSIBILITYNAME
+</th>
+<th scope="col">
+RESP_ID
+</th>
+</tr>
+<tr>
+<td>
+3011000006496
+</td>
+<td align="right">
+    169400
+</td>
+<td align="right">
+         1
+</td>
+<td align="right">
+    280243
+</td>
+<td>
+NTH006-HMTD
+</td>
+<td align="right">
+      3102
+</td>
+<td>
+301_PO Procurement
+</td>
+<td align="right">
+     51870
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+=======================
+<br>
+Profile Option Values
+<br>
+=======================
+<br>
+
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+</tr>
+<tr>
+<td>
+PO: Warn if RFQ Required before Autocreate
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+PO: Set Debug Workflow
+</td>
+<td>
+N
+</td>
+</tr>
+<tr>
+<td>
+PO: AutoCreate GL Date Option
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+PO: Automatic Document Sourcing
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+MRP: Default Sourcing
+</td>
+<td>
+HMC Assignment Set(ID:1003)
+</td>
+</tr>
+<tr>
+<td>
+PO: Release During ReqImport
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+PO: Release Creation Tolerance For Expired Blankets in Days
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+=============
+<br>
+SETUP
+<br>
+=============
+<br>
+
+<br>
+Document Type
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+ORG_ID
+</th>
+<th scope="col">
+WF_APPRO
+</th>
+<th scope="col">
+WF_APPROVAL_PROCESS
+</th>
+<th scope="col">
+AME_TRANSACTION_TYPE
+</th>
+<th scope="col">
+WF_CREAT
+</th>
+<th scope="col">
+WF_CREATEDOC_PROCESS
+</th>
+<th scope="col">
+USE_CONTRACT_FOR_SOURCING
+</th>
+<th scope="col">
+INCLUDE_NONCATALOG
+</th>
+</tr>
+<tr>
+<td align="right">
+  421
+</td>
+<td>
+REQAPPRV
+</td>
+<td>
+MAIN_REQAPPRV_PROCESS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CREATEPO
+</td>
+<td>
+REQ_LINE_PROCESSING
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+</tr>
+</table>
+<p>
+===================
+<br>
+RUNTIME DATA
+<br>
+===================
+<br>
+
+<br>
+Requisition Header
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+REQ_HDR_ID
+</th>
+<th scope="col">
+REQ_NUMBER
+</th>
+<th scope="col">
+ORG_ID
+</th>
+<th scope="col">
+REQ_TYPE
+</th>
+<th scope="col">
+AUTHORIZAT
+</th>
+<th scope="col">
+APPROVED_D
+</th>
+<th scope="col">
+CLOSED_CODE
+</th>
+<th scope="col">
+APPRV_WF_TYPE
+</th>
+<th scope="col">
+APPRV_WF_KEY
+</th>
+<th scope="col">
+PREPARER_ID
+</th>
+<th scope="col">
+LAST_UPDAT
+</th>
+<th scope="col">
+LAST_UPDATED_BY
+</th>
+<th scope="col">
+CREATION_D
+</th>
+<th scope="col">
+CREATED_BY
+</th>
+<th scope="col">
+T
+</th>
+<th scope="col">
+REQUEST_ID
+</th>
+<th scope="col">
+PROGRAM_APPLICATION_ID
+</th>
+<th scope="col">
+PROGRAM_ID
+</th>
+<th scope="col">
+PROGRAM_UP
+</th>
+<th scope="col">
+INTERFACE_SOURC
+</th>
+<th scope="col">
+INTERFACE_SOURCE_LINE_ID
+</th>
+<th scope="col">
+PCARD_ID
+</th>
+<th scope="col">
+APPS_SOURCE_COD
+</th>
+<th scope="col">
+CHA
+</th>
+<th scope="col">
+TAX_ATTRIB
+</th>
+<th scope="col">
+FIRST_APPROVER_ID
+</th>
+<th scope="col">
+FIRST_POSITION_ID
+</th>
+<th scope="col">
+EMERG_PO_N
+</th>
+<th scope="col">
+EMERG_PO_ORG
+</th>
+</tr>
+<tr>
+<td align="right">
+  169400
+</td>
+<td>
+3011000006
+496
+</td>
+<td align="right">
+  421
+</td>
+<td>
+PURCHASE
+</td>
+<td>
+APPROVED
+</td>
+<td>
+18-MAY-24
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REQAPPRV
+</td>
+<td>
+169400-365653
+</td>
+<td align="right">
+    1149
+</td>
+<td>
+18-MAY-24
+</td>
+<td align="right">
+    3849
+</td>
+<td>
+17-MAY-24
+</td>
+<td align="right">
+        0
+</td>
+<td>
+N
+</td>
+<td align="right">
+ 5602051
+</td>
+<td align="right">
+     201
+</td>
+<td align="right">
+   32353
+</td>
+<td>
+17-MAY-24
+</td>
+<td>
+INV
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+Requisition Line
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+REQ_LN_ID
+</th>
+<th scope="col">
+REQ_HDR_ID
+</th>
+<th scope="col">
+ORG_ID
+</th>
+<th scope="col">
+LINE_NUM
+</th>
+<th scope="col">
+LINE_TYPE_ID
+</th>
+<th scope="col">
+ITEM_ID
+</th>
+<th scope="col">
+ITEM_REV
+</th>
+<th scope="col">
+CATEG_ID
+</th>
+<th scope="col">
+QUANTITY
+</th>
+<th scope="col">
+UOM
+</th>
+<th scope="col">
+UNIT_PRICE
+</th>
+<th scope="col">
+CURRENCY_CODE
+</th>
+<th scope="col">
+RATE_TYPE
+</th>
+<th scope="col">
+RATE
+</th>
+<th scope="col">
+P
+</th>
+<th scope="col">
+CATALOG_TYPE
+</th>
+<th scope="col">
+DEL_TO_LOC_ID
+</th>
+<th scope="col">
+CREATION_D
+</th>
+<th scope="col">
+CREATED_BY
+</th>
+<th scope="col">
+LAST_UPDAT
+</th>
+<th scope="col">
+SRC_DOC_TY
+</th>
+<th scope="col">
+SUG_BUYER_ID
+</th>
+<th scope="col">
+ENCUM
+</th>
+<th scope="col">
+RFQ_R
+</th>
+<th scope="col">
+ON_RF
+</th>
+<th scope="col">
+NEED_BY
+</th>
+<th scope="col">
+LN_LOC_ID
+</th>
+<th scope="col">
+PARENT_REQ_LINE_ID
+</th>
+<th scope="col">
+PURCHASING_AGENT_ID
+</th>
+<th scope="col">
+DOCUMENT_T
+</th>
+<th scope="col">
+BLKT_HDR_ID
+</th>
+<th scope="col">
+BLKT_LN_NUM
+</th>
+<th scope="col">
+SUGG_VEND_NAME
+</th>
+<th scope="col">
+SUGG_VEND_LOC
+</th>
+<th scope="col">
+USE_S
+</th>
+<th scope="col">
+CANCE
+</th>
+<th scope="col">
+SRC_ORG_ID
+</th>
+<th scope="col">
+DEST_TYPE_
+</th>
+<th scope="col">
+DEST_ORG_ID
+</th>
+<th scope="col">
+QTY_CANCEL
+</th>
+<th scope="col">
+CANCEL_DAT
+</th>
+<th scope="col">
+CLOSED_COD
+</th>
+<th scope="col">
+VENDOR_ID
+</th>
+<th scope="col">
+VENDOR_SITE_ID
+</th>
+<th scope="col">
+SRC_REQ_LN_ID
+</th>
+<th scope="col">
+JOB_ID
+</th>
+<th scope="col">
+LABOR_REQ_LINE_ID
+</th>
+</tr>
+<tr>
+<td align="right">
+   280243
+</td>
+<td align="right">
+  169400
+</td>
+<td align="right">
+  421
+</td>
+<td align="right">
+        1
+</td>
+<td align="right">
+        1
+</td>
+<td align="right">
+   140101
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    26628
+</td>
+<td align="right">
+        1.00
+</td>
+<td>
+Cái
+</td>
+<td align="right">
+ 10500000.00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    51764
+</td>
+<td>
+17-MAY-24
+</td>
+<td align="right">
+        0
+</td>
+<td>
+20-MAY-24
+</td>
+<td>
+VENDOR
+</td>
+<td align="right">
+      481
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+17-MAY-24
+</td>
+<td align="right">
+   248104
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+INVENTORY
+</td>
+<td align="right">
+  465
+</td>
+<td align="right">
+         .00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+Requisition lines currently eligible to be included in a purchase order but not yet associated to one.
+<br>
+
+<br>
+
+<br>
+===============================================
+<br>
+PO/RELEASE DOCUMENT CREATED FORM REQUISITION
+<br>
+===============================================
+<br>
+
+<br>
+Document Header
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+DOCUMENT_TYPE
+</th>
+<th scope="col">
+PO_HEADER_ID
+</th>
+<th scope="col">
+AGENT_ID
+</th>
+<th scope="col">
+TYPE_LOOKUP_CODE
+</th>
+<th scope="col">
+LAST_UPDAT
+</th>
+<th scope="col">
+LAST_UPDATED_BY
+</th>
+<th scope="col">
+SEGMENT1
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+E
+</th>
+<th scope="col">
+SEGMENT2
+</th>
+<th scope="col">
+SEGMENT3
+</th>
+<th scope="col">
+SEGMENT4
+</th>
+<th scope="col">
+SEGMENT5
+</th>
+<th scope="col">
+START_DATE_ACTIVE
+</th>
+<th scope="col">
+END_DATE_ACTIVE
+</th>
+<th scope="col">
+LAST_UPDATE_LOGIN
+</th>
+<th scope="col">
+CREATION_D
+</th>
+<th scope="col">
+CREATED_BY
+</th>
+<th scope="col">
+VENDOR_ID
+</th>
+<th scope="col">
+VENDOR_SITE_ID
+</th>
+<th scope="col">
+VENDOR_CONTACT_ID
+</th>
+<th scope="col">
+SHIP_TO_LOCATION_ID
+</th>
+<th scope="col">
+BILL_TO_LOCATION_ID
+</th>
+<th scope="col">
+TERMS_ID
+</th>
+<th scope="col">
+SHIP_VIA_LOOKUP_CODE
+</th>
+<th scope="col">
+FOB_LOOKUP_CODE
+</th>
+<th scope="col">
+FREIGHT_TERMS_LOOKUP_CODE
+</th>
+<th scope="col">
+STATUS_LOOKUP_CODE
+</th>
+<th scope="col">
+CURRENCY_CODE
+</th>
+<th scope="col">
+RATE_TYPE
+</th>
+<th scope="col">
+RATE_DATE
+</th>
+<th scope="col">
+RATE
+</th>
+<th scope="col">
+FROM_HEADER_ID
+</th>
+<th scope="col">
+FROM_TYPE_LOOKUP_CODE
+</th>
+<th scope="col">
+START_DATE
+</th>
+<th scope="col">
+END_DATE
+</th>
+<th scope="col">
+BLANKET_TOTAL_AMOUNT
+</th>
+<th scope="col">
+AUTHORIZAT
+</th>
+<th scope="col">
+REVISION_NUM
+</th>
+<th scope="col">
+REVISED_DATE
+</th>
+<th scope="col">
+A
+</th>
+<th scope="col">
+APPROVED_D
+</th>
+<th scope="col">
+AMOUNT_LIMIT
+</th>
+<th scope="col">
+MIN_RELEASE_AMOUNT
+</th>
+<th scope="col">
+NOTE_TO_AUTHORIZER
+</th>
+<th scope="col">
+NOTE_TO_VENDOR
+</th>
+<th scope="col">
+NOTE_TO_RECEIVER
+</th>
+<th scope="col">
+PRINT_COUNT
+</th>
+<th scope="col">
+PRINTED_DATE
+</th>
+<th scope="col">
+VENDOR_ORDER_NUM
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+COMMENTS
+</th>
+<th scope="col">
+REPLY_DATE
+</th>
+<th scope="col">
+REPLY_METHOD_LOOKUP_CODE
+</th>
+<th scope="col">
+RFQ_CLOSE_DATE
+</th>
+<th scope="col">
+QUOTE_TYPE_LOOKUP_CODE
+</th>
+<th scope="col">
+QUOTATION_CLASS_CODE
+</th>
+<th scope="col">
+QUOTE_WARNING_DELAY_UNIT
+</th>
+<th scope="col">
+QUOTE_WARNING_DELAY
+</th>
+<th scope="col">
+QUOTE_VENDOR_QUOTE_NUMBER
+</th>
+<th scope="col">
+A
+</th>
+<th scope="col">
+ACCEPTANCE_DUE_DAT
+</th>
+<th scope="col">
+CLOSED_DATE
+</th>
+<th scope="col">
+U
+</th>
+<th scope="col">
+A
+</th>
+<th scope="col">
+CANCE
+</th>
+<th scope="col">
+FIRM_STATUS_LOOKUP_CODE
+</th>
+<th scope="col">
+FIRM_DATE
+</th>
+<th scope="col">
+F
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+E
+</th>
+<th scope="col">
+EDI_PROCES
+</th>
+<th scope="col">
+ATTRIBUTE_CATEGORY
+</th>
+<th scope="col">
+ATTRIBUTE1
+</th>
+<th scope="col">
+ATTRIBUTE2
+</th>
+<th scope="col">
+ATTRIBUTE3
+</th>
+<th scope="col">
+ATTRIBUTE4
+</th>
+<th scope="col">
+ATTRIBUTE5
+</th>
+<th scope="col">
+ATTRIBUTE6
+</th>
+<th scope="col">
+ATTRIBUTE7
+</th>
+<th scope="col">
+ATTRIBUTE8
+</th>
+<th scope="col">
+ATTRIBUTE9
+</th>
+<th scope="col">
+ATTRIBUTE10
+</th>
+<th scope="col">
+ATTRIBUTE11
+</th>
+<th scope="col">
+ATTRIBUTE12
+</th>
+<th scope="col">
+ATTRIBUTE13
+</th>
+<th scope="col">
+ATTRIBUTE14
+</th>
+<th scope="col">
+ATTRIBUTE15
+</th>
+<th scope="col">
+CLOSED_COD
+</th>
+<th scope="col">
+USSGL_TRANSACTION_CODE
+</th>
+<th scope="col">
+GOVERNMENT_CONTEXT
+</th>
+<th scope="col">
+REQUEST_ID
+</th>
+<th scope="col">
+PROGRAM_APPLICATION_ID
+</th>
+<th scope="col">
+PROGRAM_ID
+</th>
+<th scope="col">
+PROGRAM_UP
+</th>
+<th scope="col">
+ORG_ID
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE_CATEGORY
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE1
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE2
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE3
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE4
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE5
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE6
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE7
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE8
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE9
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE10
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE11
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE12
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE13
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE14
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE15
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE16
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE17
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE18
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE19
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE20
+</th>
+<th scope="col">
+INTERFACE_SOURC
+</th>
+<th scope="col">
+REFERENCE_
+</th>
+<th scope="col">
+WF_ITEM_
+</th>
+<th scope="col">
+WF_ITEM_KEY
+</th>
+<th scope="col">
+MRC_RATE_TYPE
+</th>
+<th scope="col">
+MRC_RATE_DATE
+</th>
+<th scope="col">
+MRC_RATE
+</th>
+<th scope="col">
+PCARD_ID
+</th>
+<th scope="col">
+PRICE_UPDATE_TOLERANCE
+</th>
+<th scope="col">
+PAY_ON_CODE
+</th>
+<th scope="col">
+XML
+</th>
+<th scope="col">
+XML_SEND_DATE
+</th>
+<th scope="col">
+XML_CHANGE_SEND_DA
+</th>
+<th scope="col">
+G
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CBC_ACCOUNTING_DAT
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CHANGE_REQUESTED_BY
+</th>
+<th scope="col">
+SHIPPING_CONTROL
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CONTERMS_ARTICLES_
+</th>
+<th scope="col">
+CONTERMS_DELIV_UPD
+</th>
+<th scope="col">
+E
+</th>
+<th scope="col">
+P
+</th>
+<th scope="col">
+CHANGE_SUMMARY
+</th>
+<th scope="col">
+DOCUMENT_CREATION_METHOD
+</th>
+<th scope="col">
+SUBMIT_DATE
+</th>
+<th scope="col">
+SUPPLIER_NOTIF_METHOD
+</th>
+<th scope="col">
+FAX
+</th>
+<th scope="col">
+EMAIL_ADDRESS
+</th>
+<th scope="col">
+R
+</th>
+<th scope="col">
+R
+</th>
+<th scope="col">
+U
+</th>
+<th scope="col">
+A
+</th>
+<th scope="col">
+CREA
+</th>
+<th scope="col">
+CPA_REFERENCE
+</th>
+<th scope="col">
+LOCK_OWNER
+</th>
+<th scope="col">
+LOCK_OWNER_USER_ID
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+STYLE_ID
+</th>
+<th scope="col">
+TAX_ATTRIB
+</th>
+<th scope="col">
+LAST_UPDATED_PROGRAM
+</th>
+<th scope="col">
+E
+</th>
+<th scope="col">
+P
+</th>
+<th scope="col">
+COMM_REV_NUM
+</th>
+<th scope="col">
+CLM_DOCUMENT_NUMBER
+</th>
+<th scope="col">
+OTM_STATUS_CODE
+</th>
+<th scope="col">
+O
+</th>
+<th scope="col">
+UDA_TEMPLATE_ID
+</th>
+<th scope="col">
+UDA_TEMPLATE_DATE
+</th>
+<th scope="col">
+USER_DOCUMENT_STATUS
+</th>
+<th scope="col">
+AME_APPROVAL_ID
+</th>
+<th scope="col">
+DRAFT_ID
+</th>
+<th scope="col">
+CLM_EFFECTIVE_DATE
+</th>
+<th scope="col">
+CLM_VENDOR_OFFER_NUMBER
+</th>
+<th scope="col">
+CLM_AWARD_ADMINISTRATOR
+</th>
+<th scope="col">
+CLM_NO_SIGNED_COPIES_TO_RETURN
+</th>
+<th scope="col">
+CLM_MIN_GUARANTEE_AWARD_AMT
+</th>
+<th scope="col">
+CLM_MIN_GUAR_AWARD_AMT_PERCENT
+</th>
+<th scope="col">
+CLM_MIN_ORDER_AMOUNT
+</th>
+<th scope="col">
+CLM_MAX_ORDER_AMOUNT
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CLM_AMOUNT_RELEASED
+</th>
+<th scope="col">
+CLM_EXTERNAL_IDV
+</th>
+<th scope="col">
+CLM_SUPPLIER_NAME
+</th>
+<th scope="col">
+CLM_SUPPLIER_SITE_NAME
+</th>
+<th scope="col">
+CLM_SOURCE_DOCUMENT_ID
+</th>
+<th scope="col">
+CLM_ISSUING_OFFICE
+</th>
+<th scope="col">
+CLM_COTR_OFFICE
+</th>
+<th scope="col">
+CLM_COTR_CONTACT
+</th>
+<th scope="col">
+CLM_PRIORITY_CODE
+</th>
+<th scope="col">
+CLM_MOD_ISSUING_OFFICE
+</th>
+<th scope="col">
+CLM_STANDARD_FORM
+</th>
+<th scope="col">
+CLM_DOCUMENT_FORMAT
+</th>
+<th scope="col">
+AME_TRANSACTION_TYPE
+</th>
+<th scope="col">
+CLM_AWARD_TYPE
+</th>
+<th scope="col">
+CLM_CONTRACT_OFFICER
+</th>
+<th scope="col">
+CLM_CLOSEOUT_STATUS
+</th>
+<th scope="col">
+UMBRELLA_PROGRAM_ID
+</th>
+<th scope="col">
+FON_REF_ID
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CLM_EDAGEN_DATE
+</th>
+<th scope="col">
+CLM_CONTRACT_FINANCE_CODE
+</th>
+<th scope="col">
+CLM_PAYMENT_INSTR_CODE
+</th>
+<th scope="col">
+CLM_SPECIAL_CONTRACT_TYPE
+</th>
+<th scope="col">
+IGT_DOCUMENT_NUMBER
+</th>
+<th scope="col">
+IGT_GTNC_NUMBER
+</th>
+<th scope="col">
+IGT_STATUS
+</th>
+<th scope="col">
+AGREEMENT_
+</th>
+<th scope="col">
+A
+</th>
+<th scope="col">
+A
+</th>
+<th scope="col">
+E
+</th>
+<th scope="col">
+TERMINATION_DAYS
+</th>
+<th scope="col">
+TOTAL_REMAINING_AMT
+</th>
+<th scope="col">
+IGT_BUSINESS_TXN_ID
+</th>
+<th scope="col">
+O
+</th>
+</tr>
+<tr>
+<td>
+Std Purchase Order
+</td>
+<td align="right">
+    171863
+</td>
+<td align="right">
+      1329
+</td>
+<td>
+STANDARD
+</td>
+<td>
+20-MAY-24
+</td>
+<td align="right">
+    3849
+</td>
+<td>
+3014000016051
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+        -1
+</td>
+<td>
+20-MAY-24
+</td>
+<td align="right">
+     3465
+</td>
+<td align="right">
+   104920
+</td>
+<td align="right">
+   196415
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+     47053
+</td>
+<td align="right">
+     47053
+</td>
+<td align="right">
+     10000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+VND
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+20-MAY-24
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+APPROVED
+</td>
+<td align="right">
+         0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td>
+20-MAY-24
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+         0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PO.HMTD.2024.002807
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OPEN
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+  421
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+POAPPRV
+</td>
+<td>
+171863-366305
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+AUTOCREATE
+</td>
+<td>
+20-MAY-24
+</td>
+<td>
+NONE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+         1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+3014000016051
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+20-MAY-24
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+Document Line
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+PO_LINE_ID
+</th>
+<th scope="col">
+LAST_UPDAT
+</th>
+<th scope="col">
+LAST_UPDATED_BY
+</th>
+<th scope="col">
+PO_HEADER_ID
+</th>
+<th scope="col">
+LINE_TYPE_ID
+</th>
+<th scope="col">
+LINE_NUM
+</th>
+<th scope="col">
+LAST_UPDATE_LOGIN
+</th>
+<th scope="col">
+CREATION_D
+</th>
+<th scope="col">
+CREATED_BY
+</th>
+<th scope="col">
+ITEM_ID
+</th>
+<th scope="col">
+ITEM_REV
+</th>
+<th scope="col">
+CATEG_ID
+</th>
+<th scope="col">
+ITEM_DESCRIPTION
+</th>
+<th scope="col">
+UNIT_MEAS_LOOKUP_CODE
+</th>
+<th scope="col">
+QUANTITY_COMMITTED
+</th>
+<th scope="col">
+COMMITTED_AMOUNT
+</th>
+<th scope="col">
+A
+</th>
+<th scope="col">
+NOT_TO_EXCEED_PRICE
+</th>
+<th scope="col">
+LIST_PRICE_PER_UNIT
+</th>
+<th scope="col">
+UNIT_PRICE
+</th>
+<th scope="col">
+QUANTITY
+</th>
+<th scope="col">
+UN_NUMBER_ID
+</th>
+<th scope="col">
+HAZARD_CLASS_ID
+</th>
+<th scope="col">
+NOTE_TO_VENDOR
+</th>
+<th scope="col">
+FROM_HEADER_ID
+</th>
+<th scope="col">
+FROM_LINE_ID
+</th>
+<th scope="col">
+MIN_ORDER_QUANTITY
+</th>
+<th scope="col">
+MAX_ORDER_QUANTITY
+</th>
+<th scope="col">
+QTY_RCV_TOLERANCE
+</th>
+<th scope="col">
+OVER_TOLERANCE_ERROR_FLAG
+</th>
+<th scope="col">
+MARKET_PRICE
+</th>
+<th scope="col">
+U
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+U
+</th>
+<th scope="col">
+CANCE
+</th>
+<th scope="col">
+CANCELLED_BY
+</th>
+<th scope="col">
+CANCEL_DAT
+</th>
+<th scope="col">
+CANCEL_REASON
+</th>
+<th scope="col">
+FIRM_STATUS_LOOKUP_CODE
+</th>
+<th scope="col">
+FIRM_DATE
+</th>
+<th scope="col">
+VENDOR_PRODUCT_NUM
+</th>
+<th scope="col">
+CONTRACT_NUM
+</th>
+<th scope="col">
+T
+</th>
+<th scope="col">
+TAX_NAME
+</th>
+<th scope="col">
+TYPE_1099
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+N
+</th>
+<th scope="col">
+ATTRIBUTE_CATEGORY
+</th>
+<th scope="col">
+ATTRIBUTE1
+</th>
+<th scope="col">
+ATTRIBUTE2
+</th>
+<th scope="col">
+ATTRIBUTE3
+</th>
+<th scope="col">
+ATTRIBUTE4
+</th>
+<th scope="col">
+ATTRIBUTE5
+</th>
+<th scope="col">
+ATTRIBUTE6
+</th>
+<th scope="col">
+ATTRIBUTE7
+</th>
+<th scope="col">
+ATTRIBUTE8
+</th>
+<th scope="col">
+ATTRIBUTE9
+</th>
+<th scope="col">
+ATTRIBUTE10
+</th>
+<th scope="col">
+REFERENCE_
+</th>
+<th scope="col">
+ATTRIBUTE11
+</th>
+<th scope="col">
+ATTRIBUTE12
+</th>
+<th scope="col">
+ATTRIBUTE13
+</th>
+<th scope="col">
+ATTRIBUTE14
+</th>
+<th scope="col">
+ATTRIBUTE15
+</th>
+<th scope="col">
+MIN_RELEASE_AMOUNT
+</th>
+<th scope="col">
+PRICE_TYPE_LOOKUP_CODE
+</th>
+<th scope="col">
+CLOSED_COD
+</th>
+<th scope="col">
+PRICE_BREAK_LOOKUP_CODE
+</th>
+<th scope="col">
+USSGL_TRANSACTION_CODE
+</th>
+<th scope="col">
+GOVERNMENT_CONTEXT
+</th>
+<th scope="col">
+REQUEST_ID
+</th>
+<th scope="col">
+PROGRAM_APPLICATION_ID
+</th>
+<th scope="col">
+PROGRAM_ID
+</th>
+<th scope="col">
+PROGRAM_UP
+</th>
+<th scope="col">
+CLOSED_DATE
+</th>
+<th scope="col">
+CLOSED_REASON
+</th>
+<th scope="col">
+CLOSED_BY
+</th>
+<th scope="col">
+TRANSACTION_REASON_CODE
+</th>
+<th scope="col">
+ORG_ID
+</th>
+<th scope="col">
+QC_GRADE
+</th>
+<th scope="col">
+BASE_UOM
+</th>
+<th scope="col">
+BASE_QTY
+</th>
+<th scope="col">
+SECONDARY_UOM
+</th>
+<th scope="col">
+SECONDARY_QTY
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE_CATEGORY
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE1
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE2
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE3
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE4
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE5
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE6
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE7
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE8
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE9
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE10
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE11
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE12
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE13
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE14
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE15
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE16
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE17
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE18
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE19
+</th>
+<th scope="col">
+GLOBAL_ATTRIBUTE20
+</th>
+<th scope="col">
+LINE_REFERENCE_NUM
+</th>
+<th scope="col">
+PROJECT_ID
+</th>
+<th scope="col">
+TASK_ID
+</th>
+<th scope="col">
+EXPIRATION_DATE
+</th>
+<th scope="col">
+TAX_CODE_ID
+</th>
+<th scope="col">
+OKE_CONTRACT_HEADER_ID
+</th>
+<th scope="col">
+OKE_CONTRACT_VERSION_ID
+</th>
+<th scope="col">
+SECONDARY_QUANTITY
+</th>
+<th scope="col">
+SECONDARY_UNIT_OF_MEASURE
+</th>
+<th scope="col">
+PREFERRED_GRADE
+</th>
+<th scope="col">
+AUCTION_HEADER_ID
+</th>
+<th scope="col">
+AUCTION_DISPLAY_NUMBER
+</th>
+<th scope="col">
+AUCTION_LINE_NUMBER
+</th>
+<th scope="col">
+BID_NUMBER
+</th>
+<th scope="col">
+BID_LINE_NUMBER
+</th>
+<th scope="col">
+RETROACTIVE_DATE
+</th>
+<th scope="col">
+FROM_LINE_LOCATION_ID
+</th>
+<th scope="col">
+SUPPLIER_REF_NUMBER
+</th>
+<th scope="col">
+CONTRACT_ID
+</th>
+<th scope="col">
+START_DATE
+</th>
+<th scope="col">
+AMOUNT
+</th>
+<th scope="col">
+JOB_ID
+</th>
+<th scope="col">
+CONTRACTOR_FIRST_NAME
+</th>
+<th scope="col">
+CONTRACTOR_LAST_NAME
+</th>
+<th scope="col">
+ORDER_TYPE_LOOKUP_CODE
+</th>
+<th scope="col">
+PURCHASE_BASIS
+</th>
+<th scope="col">
+MATCHING_BASIS
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+BASE_UNIT_PRICE
+</th>
+<th scope="col">
+M
+</th>
+<th scope="col">
+RETAINAGE_RATE
+</th>
+<th scope="col">
+MAX_RETAINAGE_AMOUNT
+</th>
+<th scope="col">
+PROGRESS_PAYMENT_RATE
+</th>
+<th scope="col">
+RECOUPMENT_RATE
+</th>
+<th scope="col">
+CATALOG_NAME
+</th>
+<th scope="col">
+SUPPLIER_PART_AUXID
+</th>
+<th scope="col">
+IP_CATEGORY_ID
+</th>
+<th scope="col">
+TAX_ATTRIB
+</th>
+<th scope="col">
+LAST_UPDATED_PROGRAM
+</th>
+<th scope="col">
+GROUP_LINE_ID
+</th>
+<th scope="col">
+LINE_NUM_DISPLAY
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CLM_BASE_LINE_NUM
+</th>
+<th scope="col">
+CLM_OPTION_NUM
+</th>
+<th scope="col">
+CLM_OPTION_FROM_DA
+</th>
+<th scope="col">
+CLM_OPTION_TO_DATE
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CONTRACT_TYPE
+</th>
+<th scope="col">
+COST_CONSTRAINT
+</th>
+<th scope="col">
+CLM_IDC_TYPE
+</th>
+<th scope="col">
+UDA_TEMPLATE_ID
+</th>
+<th scope="col">
+USER_DOCUMENT_STATUS
+</th>
+<th scope="col">
+DRAFT_ID
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CLM_EXERCISED_DATE
+</th>
+<th scope="col">
+CLM_MIN_TOTAL_AMOUNT
+</th>
+<th scope="col">
+CLM_MAX_TOTAL_AMOUNT
+</th>
+<th scope="col">
+CLM_MIN_TOTAL_QUANTITY
+</th>
+<th scope="col">
+CLM_MAX_TOTAL_QUANTITY
+</th>
+<th scope="col">
+CLM_MIN_ORDER_AMOUNT
+</th>
+<th scope="col">
+CLM_MAX_ORDER_AMOUNT
+</th>
+<th scope="col">
+CLM_MIN_ORDER_QUANTITY
+</th>
+<th scope="col">
+CLM_MAX_ORDER_QUANTITY
+</th>
+<th scope="col">
+CLM_TOTAL_AMOUNT_ORDERED
+</th>
+<th scope="col">
+CLM_TOTAL_QUANTITY_ORDERED
+</th>
+<th scope="col">
+CLM_FSC_PSC
+</th>
+<th scope="col">
+CLM_MDAPS_MAIS
+</th>
+<th scope="col">
+CLM_NAICS
+</th>
+<th scope="col">
+CLM_ORDER_START_DA
+</th>
+<th scope="col">
+CLM_ORDER_END_DATE
+</th>
+<th scope="col">
+REVISION_NUM
+</th>
+<th scope="col">
+CLM_APPROVED_UNDEF_AMOUNT
+</th>
+<th scope="col">
+CLM_DELIVERY_EVENT_CODE
+</th>
+<th scope="col">
+CLM_EXHIBI
+</th>
+<th scope="col">
+CLM_PAYMENT_INSTR_CODE
+</th>
+<th scope="col">
+CLM_POP_EXCEPTION_REASON
+</th>
+<th scope="col">
+CLM_UDA_PRICING_TOTAL
+</th>
+<th scope="col">
+CLM_UNDEF_
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+I
+</th>
+</tr>
+<tr>
+<td align="right">
+    253888
+</td>
+<td>
+20-MAY-24
+</td>
+<td align="right">
+    3465
+</td>
+<td align="right">
+    171863
+</td>
+<td align="right">
+        1
+</td>
+<td align="right">
+        2
+</td>
+<td align="right">
+   5894346
+</td>
+<td>
+20-MAY-24
+</td>
+<td align="right">
+     3465
+</td>
+<td align="right">
+   140101
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    26628
+</td>
+<td>
+Nẹp khóa đa hướng đầ
+u xa xương đòn (trái
+, phải) các cỡ
+</td>
+<td>
+Cái
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+         0
+</td>
+<td align="right">
+ 10500000.00
+</td>
+<td align="right">
+        1.00
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Nẹp khóa đa hướng đầu xa xương đòn (trái, phải) các cỡ,Nẹp khoá,Các cỡ,Không xác định,Jiangsu Jinlu,China
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+         0
+</td>
+<td>
+WARNING
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OPEN
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+  421
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+QUANTITY
+</td>
+<td>
+GOODS
+</td>
+<td>
+QUANTITY
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+  10500000
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+Release Information (for BPA only)
+<br>
+
+<br>
+=======================
+<br>
+SOURCING INFORMATION
+<br>
+=======================
+<br>
+
+<br>
+Sourcing Assignment Set for the Line
+<br>
+Sourcing Rule
+<br>
+Approved Supplier List (Non-Disabled only)
+<br>
+ASL Documents
+<br>
+
+<br>
+===========================
+<br>
+WORKFLOW INFORMATION
+<br>
+===========================
+<br>
+<div class="notemsgsml">
+<br>
+To automatically create a PO document using workflow, there are a series of steps that need to complete successfully as follows:
+<br>
+<ul>
+<br>
+<li>Requisition approval process should successfully approve the requisiiton. Verify the activity 'APPROVE_REQUISITION' is completed normal.</li>
+<br>
+<li>Requisition approval process launches a second process for PO creation. Verify the activity 'LAUNCH_CREATE_PO_WF' is successfully completed.</li>
+<br>
+<ul><li>A new WF process with Item type CREATEPO and root activity name OVERALL_AUTOCREATE_PROCESS should be created. Verify the WF was successfully launched.</li>
+<br>
+<li>The CREATEPO  should create 2 new WF process </li>
+<br>
+<ul><li>One LAUNCH_REQ_LINE_PROCESSING process for each requisition line</li>
+<br>
+<li>After all lines where processed, a LAUNCH_DOC_CREATION_APPROVAL process. Verify the activity CREATE_DOC completes in status CREATE_OK</li>
+<br>
+<li>note that if CREATE_DOC is completed ok, this process also submits a new process to approve the PO document. Activity name is LAUNCH_PO_APPROVAL</li>
+<br>
+</ul>
+<br>
+</ul>
+<br>
+</ul>
+<br>
+</div>
+<br>
+Requisition Approval - Workflow Instance Information
+<br>
+
+<br>
+Requisition Approval - Default Values for WF Item Attributes
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+DISPLAY_NAME
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+Default Value
+</th>
+</tr>
+<tr>
+<td>
+Send PO Autocreation to Background
+</td>
+<td>
+SEND_CREATEPO_TO_BACKGROUND
+</td>
+<td>
+Y
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+Requisition Approval - Workflow Status Detail
+<br>
+
+<br>
+
+<br>
+Requisition Approval - Workflow Errors
+<br>
+
+<br>
+
+<br>
+Requisition Approval - Validation Checks
+<br>
+
+<br>
+CREATEPO Process - Workflow Instance Information
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+ITEM_TYPE
+</th>
+<th scope="col">
+ITEM_KEY
+</th>
+<th scope="col">
+PARENT_ITEM_TYPE
+</th>
+<th scope="col">
+PARENT_ITEM_KEY
+</th>
+<th scope="col">
+BEGIN_DATE
+</th>
+<th scope="col">
+END_DATE
+</th>
+<th scope="col">
+ROOT_ACTIVITY
+</th>
+<th scope="col">
+ROOT_ACTIVITY_VERSION
+</th>
+<th scope="col">
+OWNER_ROLE
+</th>
+</tr>
+<tr>
+<td>
+CREATEPO
+</td>
+<td>
+169400-365987
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+18-MAY-24 09:47:06
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REQ_LINE_PROCESSING
+</td>
+<td align="right">
+        11
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+CREATEPO Process - Default Values For WF Item Attributes
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+DISPLAY_NAME
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+Default Value
+</th>
+</tr>
+<tr>
+<td>
+Is Automatic Creation Allowed?
+</td>
+<td>
+AUTOCREATE_DOC
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+Is Automatic Approval Allowed?
+</td>
+<td>
+AUTO_APPROVE_DOC
+</td>
+<td>
+N
+</td>
+</tr>
+<tr>
+<td>
+Should Workflow Create The Release?
+</td>
+<td>
+CONT_WF_FOR_AC_REL_GEN
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+Is Grouping of Requisition Line Allowed?
+</td>
+<td>
+GROUPING_ALLOWED_FLAG
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+Is Grouping of One Time Address Line Allowed?
+</td>
+<td>
+GROUP_ONE_ADDR_LINE_FLAG
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+Should Contract be used to autocreate Doc?
+</td>
+<td>
+USE_CONTRACT_FLAG
+</td>
+<td>
+N
+</td>
+</tr>
+<tr>
+<td>
+Should non-catalog requests be autosourced from contract?
+</td>
+<td>
+INCLUDE_NON_CATALOG_REQ_FLAG
+</td>
+<td>
+N
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+CREATEPO Overall Autocreate Process - Workflow Status Detail
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+BEGIN_DATE
+</th>
+<th scope="col">
+END_DATE
+</th>
+<th scope="col">
+ACTIVITY
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+RESULT
+</th>
+<th scope="col">
+ACTION
+</th>
+</tr>
+<tr>
+<td>
+18-MAY-24 09:47:06
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ROOT/REQ_LINE_PROCESSING
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+#NULL
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+18-MAY-24 09:47:06
+</td>
+<td>
+18-MAY-24 09:47:06
+</td>
+<td>
+REQ_LINE_PROCESSING/START
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+#NULL
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+29-MAR-25 11:32:10
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REQ_LINE_PROCESSING/GET_REQUISITION_INFO
+RMATION
+</td>
+<td>
+ERROR
+</td>
+<td>
+#EXCEPTION
+</td>
+<td>
+RETRY
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+<br>
+CREATEPO Overall Autocreate Process - Workflow Instance Item Attributes
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+DISPLAY_NAME
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+</tr>
+<tr>
+<td>
+Application ID
+</td>
+<td>
+APPLICATION_ID
+</td>
+<td>
+201
+</td>
+</tr>
+<tr>
+<td>
+Is Automatic Creation Allowed?
+</td>
+<td>
+AUTOCREATE_DOC
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+Consume req demand doc id
+</td>
+<td>
+CONSUME_REQ_DEMAND_DOC_ID
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Is Contract Required on Requisition Line?
+</td>
+<td>
+CONTRACT_REQUIRED_FLAG
+</td>
+<td>
+N
+</td>
+</tr>
+<tr>
+<td>
+Should Workflow Create The Release?
+</td>
+<td>
+CONT_WF_FOR_AC_REL_GEN
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+Is Grouping of Requisition Line Allowed?
+</td>
+<td>
+GROUPING_ALLOWED_FLAG
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+Group ID
+</td>
+<td>
+GROUP_ID
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+Is Grouping of One Time Address Line Allowed?
+</td>
+<td>
+GROUP_ONE_ADDR_LINE_FLAG
+</td>
+<td>
+Y
+</td>
+</tr>
+<tr>
+<td>
+Should non-catalog requests be autosourced from contract?
+</td>
+<td>
+INCLUDE_NON_CATALOG_REQ_FLAG
+</td>
+<td>
+N
+</td>
+</tr>
+<tr>
+<td>
+Org ID
+</td>
+<td>
+ORG_ID
+</td>
+<td>
+421
+</td>
+</tr>
+<tr>
+<td>
+Responsibility ID
+</td>
+<td>
+RESPONSIBILITY_ID
+</td>
+<td>
+51870
+</td>
+</tr>
+<tr>
+<td>
+User ID
+</td>
+<td>
+USER_ID
+</td>
+<td>
+3849
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+<br>
+CREATEPO Overall Autocreate Process - Workflow Errors
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+ACTIVITY
+</th>
+<th scope="col">
+RESULT
+</th>
+<th scope="col">
+Error Name
+</th>
+<th scope="col">
+Error Message
+</th>
+<th scope="col">
+Error Stack
+</th>
+</tr>
+<tr>
+<td>
+GET_REQUISITION_INFORMATION
+</td>
+<td>
+#EXCEPTION
+</td>
+<td>
+100
+</td>
+<td>
+ORA-01403: no data found
+</td>
+<td>
+
+po_autocreate_doc.get_req_info()
+Wf_Engine_Util.Function_Call(PO_AUTOCREATE_DOC.GET_REQ_INFO, CREATEPO, 169400-365987, 259906, RUN)
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+
+<br>
+CREATEPO Overall Autocreate Process - Validation Checks
+<br>
+
+<br>
+CREATEPO REQ LINE Processing - WF Instance Information
+<br>
+
+<br>
+
+<br>
+CREATEPO REQ LINE Processing - Workflow Status Detail
+<br>
+
+<br>
+CREATEPO REQ LINE Processing - Workflow Instance Attributes
+<br>
+
+<br>
+
+<br>
+CREATEPO REQ LINE Processing - Workflow Errored Activities
+<br>
+
+<br>
+Create and Approve Document Workflow
+<br>
+
+<br>
+Create and Approve Document - Workflow Status Detail
+<br>
+
+<br>
+Create and Approve Document - Workflow Instance Attributes
+<br>
+
+<br>
+
+<br>
+Create and Approve Document - Workflow Errored Activities
+<br>
+
+<br>
+DATA VALIDATION
+<br>
+ERROR:
+<br>
+ORA-06502: PL/SQL: numeric or value error: host bind array too small
+<br>
+ORA-06512: at line 1 
+<br>
+
+
+<pre>
+declare
+*
+</pre>
+ERROR at line 1:
+<br>
+ORA-20000: ORU-10027: buffer overflow, limit of 2000 bytes
+<br>
+ORA-06512: at "SYS.DBMS_OUTPUT", line 32
+<br>
+ORA-06512: at "SYS.DBMS_OUTPUT", line 97
+<br>
+ORA-06512: at "SYS.DBMS_OUTPUT", line 112
+<br>
+ORA-06512: at line 46
+<br>
+ORA-06512: at line 46 
+<br>
+
+
+
+<br>
+
+<br>
+Po Workflow Debug Messages
+<br>
+
+<br>
+
+<br>
+<p>
+<table border='2' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+COMPLETION_DATE
+</th>
+</tr>
+<tr>
+<td>
+2025/05/06 14:30:00
+</td>
+</tr>
+</table>
+<p>
+=============================== END of FILE ===============================
+<br>
+</body>
+</html>
